@@ -1,0 +1,8 @@
+<div class="categorias-container">
+  <div class="categoria" *ngFor="let categoria of categorias" [routerLink]="['/articulos', categoria.nombre]">
+    <div class="categoria-icono">
+      <img [src]="categoria.imagen" [alt]="categoria.nombre" />
+    </div>
+    <h3>{{ categoria.nombre }}</h3>
+  </div>
+</div>
