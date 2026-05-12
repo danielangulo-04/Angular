@@ -1,46 +1,47 @@
-<main>
-  <section class="Inicio">
+<main class="page fade-in">
+  <!-- Sección Hero / Inicio -->
+  <section class="Inicio container">
     <div class="Inicio-text">
-      <h1>“Educamos para crear, inspiramos para emprender.”</h1>
-                  <!-- Area de cursos personalizado y notificaciones -->
-            <div style="margin-top:20px; border-top:1px solid rgba(255,255,255,.02); padding-top:18px;">
-                <div class="dash-header" style="align-items:center;">
-                    <h2 style="font-size:18px; margin:0;">Explora Cursos Personalizados</h2>
-                    <div style="margin-left:auto;">
-                        <div class="notify-bar" style="margin:0;">
-                            <p class="msg" style="margin:0; color:var(--muted);">Activa notificaciones para alertas
-                                automáticas</p>
-                            <button id="notifyBtn" class="btn-notify">🔔 Activar notificaciones</button>
-                        </div>
-                    </div>
-                </div>
+      <span class="new-badge"></span>
+      <h1>“Educamos para crear, <br><span>inspiramos para emprender.”</span></h1>
 
-                <p class="msg">Selecciona hasta <strong>3 campos de interés</strong> para ver cursos recomendados según
-                    tus preferencias.</p>
+      <p class="msg">Impulsa tu carrera profesional conectando con proyectos reales y formación especializada.</p>
 
-                <fieldset class="interests" style="margin-top:8px;">
-                    <legend>Áreas de interés</legend>
-                    <label><input type="checkbox" name="interest" value="Marketing"> Marketing</label>
-                    <label><input type="checkbox" name="interest" value="Finanzas"> Finanzas</label>
-                    <label><input type="checkbox" name="interest" value="Tecnología"> Tecnología</label>
-                    <label><input type="checkbox" name="interest" value="Arquitectura"> Arquitectura</label>
-                    <label><input type="checkbox" name="interest" value="Música"> Música</label>
-                    <label><input type="checkbox" name="interest" value="Gastronomía"> Gastronomía</label>
-                </fieldset>
+      <!-- Botón de Acción Principal -->
+      <div class="actions">
+        <button class="btn primary" routerLink="/articulos">Explorar áreas</button>
+        <button class="btn ghost">Saber más</button>
+      </div>
 
-                <section id="coursesArea">
-                    <div id="coursesContainer" class="courses-grid">
+      <!-- Área de Personalización (Glass Card) -->
+      <div class="card suggestion">
+        <div class="dash-header">
+          <h2>Cursos Personalizados</h2>
+          <div class="notify-bar">
+            <button id="notifyBtn" class="btn-notify">🔔 Activar alertas</button>
+          </div>
+        </div>
 
-                    </div>
-                </section>
-            </div>
-      <button class="cta-btn" routerLink="/articulos" routerLinkActive="activo">Explorar artículos</button>
+        <p class="slogan">Selecciona tus <strong>áreas de interés</strong> (máx. 3) para personalizar tu feed.</p>
+
+        <div class="interests">
+          <label class="interest-chip"><input type="checkbox" name="interest" value="Marketing"> Marketing</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="Finanzas"> Finanzas</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="Tecnología"> Tecnología</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="Arquitectura"> Arquitectura</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="Música"> Música</label>
+          <label class="interest-chip"><input type="checkbox" name="interest" value="Gastronomía"> Gastronomía</label>
+        </div>
+
+        <div id="coursesArea" class="courses-grid">
+          <!-- Aquí se cargarán los cursos dinámicamente -->
+        </div>
+      </div>
     </div>
+
+    <!-- Imagen con efecto de flotación -->
     <div class="Inicio-img">
-      <img src="assets/UNDERTAKE.png" alt="Intercambio digital" />
+      <img src="assets/UNDERTAKE.png" alt="Undertake Logo" class="logo-main" />
     </div>
   </section>
-
-
-
 </main>
