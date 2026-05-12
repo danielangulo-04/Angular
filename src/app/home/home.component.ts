@@ -3,8 +3,8 @@ import { Router, RouterLink, RouterOutlet } from '@angular/router';
 
 /**
  * Descripción: Componente que muestra la pantalla de inicio
- * Autor: Hervin Cajas.
- * Fecha de creación: 02/10/2025
+ * Autor: Julian.
+ * Fecha de creación: 10/05/2026
  */
 
 @Component({
@@ -20,7 +20,7 @@ export class HomeComponent {
 
   irACategorias(categoria: string) {
     this.router.navigate(['/categorias'], { queryParams: { tipo: categoria } });
-    
+
   }
 
 }
