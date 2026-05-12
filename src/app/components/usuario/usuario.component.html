@@ -1,1 +1,76 @@
-<p>usuario worksssssssssss!</p>
+<div class="container">
+
+  <h2 class="titulo">Gestión de Usuarios</h2>
+
+  <!-- FORMULARIO -->
+  <div class="formulario">
+
+    <input
+      type="text"
+      placeholder="Nombre completo"
+      [(ngModel)]="nuevoUsuario.nombre"
+    >
+
+    <input
+      type="email"
+      placeholder="Correo electrónico"
+      [(ngModel)]="nuevoUsuario.correo"
+    >
+
+    <input
+      type="password"
+      placeholder="Contraseña"
+      [(ngModel)]="nuevoUsuario.password"
+    >
+
+    <select [(ngModel)]="nuevoUsuario.rol">
+      <option value="">Seleccionar rol</option>
+      <option value="Administrador">Administrador</option>
+      <option value="Estudiante">Estudiante</option>
+      <option value="Mentor">Mentor</option>
+    </select>
+
+    <button (click)="agregarUsuario()">
+      Registrar Usuario
+    </button>
+
+  </div>
+
+  <!-- TABLA -->
+  <table>
+
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Correo</th>
+      <th>Rol</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+
+    <tbody>
+
+    <tr *ngFor="let usuario of usuarios; let i = index">
+
+      <td>{{ i + 1 }}</td>
+
+      <td>{{ usuario.nombre }}</td>
+
+      <td>{{ usuario.correo }}</td>
+
+      <td>{{ usuario.rol }}</td>
+
+      <td>
+        <button (click)="eliminarUsuario(i)">
+          Eliminar
+        </button>
+      </td>
+
+    </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
