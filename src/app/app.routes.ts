@@ -22,6 +22,6 @@ export const routes: Routes = [
   { path: 'articulos/:categoria', component: ArticulosComponent },
   { path: 'articulos', component: ArticulosComponent },
   { path: 'ayuda', component: AyudaComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },  // ← siempre al final
-  { path: '**', redirectTo: 'home' }                    // ← rutas no encontradas
+  { path: '', redirectTo: 'login', pathMatch: 'full' },  // ← siempre al final
+  { path: '**', redirectTo: 'login' }                    // ← rutas no encontradas
 ];
