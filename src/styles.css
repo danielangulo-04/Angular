@@ -2,7 +2,7 @@
 #logo {
   position: fixed;           /* Fija el logo en la pantalla */
   top: 20px;                 /* Espacio desde arriba */
-  left: 20px; 
+  left: 20px;
   size: 10%;               /* Espacio desde la izquierda */
   width: 10%;               /* Tamaño del logo */
   height: auto;              /* Mantiene la proporción */
