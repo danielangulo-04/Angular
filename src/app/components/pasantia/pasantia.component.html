@@ -1,1 +1,108 @@
-<p>pasantia worksss perrraaas!</p>
+<div class="container">
+
+  <h1 class="titulo">
+    Pasantías Profesionales
+  </h1>
+
+  <p class="subtitulo">
+    Encuentra oportunidades increíbles para tu futuro 💼
+  </p>
+
+  <!-- MENSAJE -->
+
+  <div
+    class="mensaje"
+    *ngIf="mensajeExito"
+  >
+    {{ mensajeExito }}
+  </div>
+
+  <!-- FORMULARIO -->
+
+  <div class="formulario">
+
+    <input
+      type="text"
+      placeholder="Empresa"
+      [(ngModel)]="nuevaPasantia.empresa"
+    >
+
+    <input
+      type="text"
+      placeholder="Área"
+      [(ngModel)]="nuevaPasantia.area"
+    >
+
+    <input
+      type="text"
+      placeholder="Descripción"
+      [(ngModel)]="nuevaPasantia.descripcion"
+    >
+
+    <input
+      type="text"
+      placeholder="Modalidad"
+      [(ngModel)]="nuevaPasantia.modalidad"
+    >
+
+    <input
+      type="text"
+      placeholder="Ciudad"
+      [(ngModel)]="nuevaPasantia.ciudad"
+    >
+
+    <button (click)="guardar()">
+      🚀 Registrar Pasantía
+    </button>
+
+  </div>
+
+  <!-- TABLA -->
+
+  <table>
+
+    <thead>
+
+    <tr>
+      <th>Empresa</th>
+      <th>Área</th>
+      <th>Descripción</th>
+      <th>Modalidad</th>
+      <th>Ciudad</th>
+      <th>Acciones</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr *ngFor="let pasantia of pasantias">
+
+      <td>{{ pasantia.empresa }}</td>
+
+      <td>{{ pasantia.area }}</td>
+
+      <td>{{ pasantia.descripcion }}</td>
+
+      <td>{{ pasantia.modalidad }}</td>
+
+      <td>{{ pasantia.ciudad }}</td>
+
+      <td>
+
+        <button
+          class="btn-eliminar"
+          (click)="eliminar(pasantia.id!)"
+        >
+          Eliminar
+        </button>
+
+      </td>
+
+    </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
