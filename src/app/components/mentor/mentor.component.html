@@ -1,1 +1,106 @@
-<p>mentor works pérrraas!</p>
+<div class="container">
+
+  <h1 class="titulo">
+    Mentores Profesionales
+  </h1>
+
+  <p class="subtitulo">
+    Conecta con expertos y fortalece tu crecimiento profesional 🚀
+  </p>
+
+  <!-- MENSAJE -->
+  <div *ngIf="mensajeExito" class="mensaje-exito">
+    {{ mensajeExito }}
+  </div>
+
+  <!-- FORMULARIO -->
+  <div class="formulario">
+
+    <div class="form-grid">
+
+      <input
+        type="text"
+        placeholder="Nombre del mentor"
+        [(ngModel)]="nuevoMentor.nombre"
+      />
+
+      <input
+        type="text"
+        placeholder="Especialidad"
+        [(ngModel)]="nuevoMentor.especialidad"
+      />
+
+      <input
+        type="text"
+        placeholder="Experiencia"
+        [(ngModel)]="nuevoMentor.experiencia"
+      />
+
+      <input
+        type="email"
+        placeholder="Correo electrónico"
+        [(ngModel)]="nuevoMentor.email"
+      />
+
+      <input
+        type="text"
+        placeholder="Teléfono"
+        [(ngModel)]="nuevoMentor.telefono"
+      />
+
+    </div>
+
+    <button (click)="guardar()">
+      ✨ Registrar Mentor
+    </button>
+
+  </div>
+
+  <!-- TABLA -->
+  <div class="tabla-container">
+
+    <table>
+
+      <thead>
+      <tr>
+        <th>Mentor</th>
+        <th>Especialidad</th>
+        <th>Experiencia</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
+
+      <tbody>
+
+      <tr *ngFor="let mentor of mentores">
+
+        <td>{{ mentor.nombre }}</td>
+
+        <td>{{ mentor.especialidad }}</td>
+
+        <td>{{ mentor.experiencia }}</td>
+
+        <td>{{ mentor.email }}</td>
+
+        <td>{{ mentor.telefono }}</td>
+
+        <td>
+          <button
+            class="btn-eliminar"
+            (click)="eliminar(mentor.id!)"
+          >
+            Eliminar
+          </button>
+        </td>
+
+      </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</div>

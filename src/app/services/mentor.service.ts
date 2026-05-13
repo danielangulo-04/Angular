@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
-
 
 export interface Mentor {
-  id?: string;
+  id?: number;
   nombre: string;
   especialidad: string;
   experiencia: string;
@@ -17,23 +15,20 @@ export interface Mentor {
   providedIn: 'root'
 })
 export class MentorService {
-  private url = `${environment.apiUrl}/mentores`;
+
+  private apiUrl = 'http://localhost:8080/mentores';
 
   constructor(private http: HttpClient) {}
 
   obtenerTodos(): Observable<Mentor[]> {
-    return this.http.get<Mentor[]>(this.url);
+    return this.http.get<Mentor[]>(this.apiUrl);
   }
 
   guardar(mentor: Mentor): Observable<Mentor> {
-    return this.http.post<Mentor>(this.url, mentor);
+    return this.http.post<Mentor>(this.apiUrl, mentor);
   }
 
-  buscarPorId(id: string): Observable<Mentor> {
-    return this.http.get<Mentor>(`${this.url}/${id}`);
-  }
-
-  eliminar(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.url}/${id}`);
+  eliminar(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
 }
