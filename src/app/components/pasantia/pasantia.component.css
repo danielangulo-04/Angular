@@ -15,21 +15,14 @@ body{
   font-size:3rem;
   font-weight:800;
   margin-bottom:10px;
+  color:#4f46e5;
 
-  background:linear-gradient(
-    135deg,
-    #4f46e5,
-    #7c83ff
-  );
-
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
 }
 
 .subtitulo{
   color:#555;
   margin-bottom:35px;
-  font-size:15px;
+  font-size:20px;
 }
 
 .mensaje{
@@ -45,49 +38,79 @@ body{
 
 .formulario{
 
-  background:white;
+  background:rgba(255,255,255,0.04);
 
-  padding:30px;
+  border:1px solid rgba(255,255,255,0.08);
 
-  border-radius:22px;
+  backdrop-filter:blur(14px);
 
-  margin-bottom:35px;
+  border-radius:30px;
+
+  padding:35px;
+
+  margin-bottom:40px;
 
   box-shadow:
-  0 12px 30px rgba(0,0,0,0.08);
+  0 15px 40px rgba(0,0,0,0.35);
 }
 
-.formulario input{
+/* INPUTS */
+
+.formulario input,
+.formulario select{
 
   width:100%;
 
-  padding:15px;
+  padding:16px;
 
   margin-bottom:18px;
 
-  border:1px solid #d1d5db;
+  border:1px solid rgba(255,255,255,0.10);
 
-  border-radius:14px;
+  border-radius:18px;
 
-  font-size:14px;
+  background:
+  rgba(255,255,255,0.08);
 
-  color:#111827;
+  backdrop-filter:blur(10px);
 
-  transition:0.3s;
-}
+  color:#111827 !important;
 
-.formulario input:focus{
+  -webkit-text-fill-color:#111827 !important;
+
+  font-size:15px;
+
+  font-weight:500;
 
   outline:none;
 
-  border-color:#6366f1;
+  transition:0.35s ease;
 
-  box-shadow:
-  0 0 0 4px rgba(99,102,241,0.15);
+  box-sizing:border-box;
 }
 
 .formulario input::placeholder{
-  color:#9ca3af;
+
+  color:#6b7280;
+
+  opacity:1;
+}
+
+.formulario select{
+
+  color:#111827 !important;
+}
+
+.formulario input:focus,
+.formulario select:focus{
+
+  background:
+  rgba(255,255,255,0.12);
+
+  border:1px solid #7c83ff;
+
+  box-shadow:
+  0 0 20px rgba(124,131,255,0.35);
 }
 
 /* BOTON */
@@ -99,7 +122,7 @@ body{
   background:
   linear-gradient(
     135deg,
-    #4f46e5,
+    #5b6eff,
     #7c83ff
   );
 
@@ -107,26 +130,28 @@ body{
 
   border:none;
 
-  padding:16px;
+  padding:16px 30px;
 
-  border-radius:14px;
+  border-radius:18px;
 
   font-weight:700;
 
   cursor:pointer;
 
-  transition:0.3s ease;
+  transition:0.35s ease;
 
-  font-size:15px;
+  box-shadow:
+  0 10px 30px rgba(91,110,255,0.35);
 }
 
 .formulario button:hover{
 
-  transform:translateY(-2px);
+  transform:translateY(-4px);
 
   box-shadow:
-  0 12px 25px rgba(79,70,229,0.30);
+  0 18px 35px rgba(91,110,255,0.50);
 }
+
 
 /* TABLA */
 
