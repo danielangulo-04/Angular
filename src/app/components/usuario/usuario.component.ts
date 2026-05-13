@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { UsuarioService, Usuario } from '../../services/usuario.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-usuario',
@@ -10,37 +9,61 @@ import { UsuarioService, Usuario } from '../../services/usuario.service';
   templateUrl: './usuario.component.html',
   styleUrls: ['./usuario.component.css']
 })
-export class UsuarioComponent implements OnInit {
-  usuarios: Usuario[] = [];
-  nuevoUsuario: Usuario = { nombre: '', email: '', password: '', rol: '' };
-  mensajeExito: string = '';
+export class UsuarioComponent {
 
-  constructor(private usuarioService: UsuarioService) {}
-
-  ngOnInit() {
-    this.cargarUsuarios();
-  }
-
-  cargarUsuarios() {
-    this.usuarioService.obtenerTodos().subscribe(data => {
-      this.usuarios = data;
-    });
-  }
-
-  guardar() {
-    this.usuarioService.guardar(this.nuevoUsuario).subscribe(() => {
-      this.mensajeExito = '✅ Usuario guardado correctamente';
-      this.nuevoUsuario = { nombre: '', email: '', password: '', rol: '' };
-      this.cargarUsuarios();
-      setTimeout(() => this.mensajeExito = '', 3000);
-    });
-  }
-
-  eliminar(id: string) {
-    if (confirm('¿Estás seguro de eliminar este usuario?')) {
-      this.usuarioService.eliminar(id).subscribe(() => {
-        this.cargarUsuarios();
-      });
+  usuarios = [
+    {
+      nombre: 'Julian Rojas',
+      correo: 'julian@gmail.com',
+      rol: 'Administrador'
+    },
+    {
+      nombre: 'Andersson Ruiz',
+      correo: 'andersson@gmail.com',
+      rol: 'Estudiante'
+    },
+    {
+      nombre: 'Sofia Martinez',
+      correo: 'sofia@gmail.com',
+      rol: 'Mentor'
     }
+  ];
+
+  nuevoUsuario = {
+    nombre: '',
+    correo: '',
+    password: '',
+    rol: ''
+  };
+
+  agregarUsuario() {
+
+    if (
+      this.nuevoUsuario.nombre.trim() === '' ||
+      this.nuevoUsuario.correo.trim() === '' ||
+      this.nuevoUsuario.password.trim() === '' ||
+      this.nuevoUsuario.rol.trim() === ''
+    ) {
+      alert('Completa todos los campos');
+      return;
+    }
+
+    this.usuarios.push({
+      nombre: this.nuevoUsuario.nombre,
+      correo: this.nuevoUsuario.correo,
+      rol: this.nuevoUsuario.rol
+    });
+
+    this.nuevoUsuario = {
+      nombre: '',
+      correo: '',
+      password: '',
+      rol: ''
+    };
   }
+
+  eliminarUsuario(index: number) {
+    this.usuarios.splice(index, 1);
+  }
+
 }
