@@ -11,34 +11,67 @@ import { MentorService, Mentor } from '../../services/mentor.service';
   styleUrls: ['./mentor.component.css']
 })
 export class MentorComponent implements OnInit {
+
   mentores: Mentor[] = [];
-  nuevoMentor: Mentor = { nombre: '', especialidad: '', experiencia: '', email: '', telefono: '' };
+
+  nuevoMentor: Mentor = {
+    nombre: '',
+    especialidad: '',
+    experiencia: '',
+    email: '',
+    telefono: ''
+  };
+
   mensajeExito: string = '';
 
   constructor(private mentorService: MentorService) {}
 
-  ngOnInit() { this.cargarMentores(); }
+  ngOnInit(): void {
+    this.cargarMentores();
+  }
 
-  cargarMentores() {
+  cargarMentores(): void {
     this.mentorService.obtenerTodos().subscribe(data => {
       this.mentores = data;
     });
   }
 
-  guardar() {
+  guardar(): void {
+
     this.mentorService.guardar(this.nuevoMentor).subscribe(() => {
+
       this.mensajeExito = '✅ Mentor guardado correctamente';
-      this.nuevoMentor = { nombre: '', especialidad: '', experiencia: '', email: '', telefono: '' };
+
+      this.nuevoMentor = {
+        nombre: '',
+        especialidad: '',
+        experiencia: '',
+        email: '',
+        telefono: ''
+      };
+
       this.cargarMentores();
-      setTimeout(() => this.mensajeExito = '', 3000);
+
+      setTimeout(() => {
+        this.mensajeExito = '';
+      }, 3000);
+
     });
+
   }
 
-  eliminar(id: string) {
-    if (confirm('¿Estás seguro de eliminar este mentor?')) {
+  eliminar(id: number): void {
+
+    if(confirm('¿Deseas eliminar este mentor?')) {
+
       this.mentorService.eliminar(id).subscribe(() => {
+
         this.cargarMentores();
+
       });
+
     }
+
   }
+
 }

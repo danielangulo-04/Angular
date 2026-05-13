@@ -1,15 +1,10 @@
 <div class="container">
 
-  <h2 class="titulo">
-    Gestión de Estudiantes
-  </h2>
+  <h1 class="titulo">Gestión de Estudiantes</h1>
 
-  <div
-    class="mensaje-exito"
-    *ngIf="mensajeExito"
-  >
-    {{ mensajeExito }}
-  </div>
+  <p class="subtitulo">
+    Registra y administra estudiantes 🎓
+  </p>
 
   <!-- FORMULARIO -->
 
@@ -18,22 +13,19 @@
     <input
       type="text"
       placeholder="Nombre completo"
-      [(ngModel)]="nuevoEstudiante.nombre"
     >
 
     <input
       type="text"
       placeholder="Carrera"
-      [(ngModel)]="nuevoEstudiante.carrera"
     >
 
     <input
       type="number"
       placeholder="Edad"
-      [(ngModel)]="nuevoEstudiante.edad"
     >
 
-    <button (click)="guardar()">
+    <button>
       Registrar Estudiante
     </button>
 
@@ -41,47 +33,38 @@
 
   <!-- TABLA -->
 
-  <table>
+  <div class="tabla-container">
 
-    <thead>
+    <table>
 
-    <tr>
-      <th>#</th>
-      <th>Nombre</th>
-      <th>Carrera</th>
-      <th>Edad</th>
-      <th>Acciones</th>
-    </tr>
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Carrera</th>
+        <th>Edad</th>
+        <th>Acciones</th>
+      </tr>
+      </thead>
 
-    </thead>
+      <tbody>
 
-    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Anderson Ruiz</td>
+        <td>Ingeniería</td>
+        <td>20</td>
+        <td>
+          <button class="btn-eliminar">
+            Eliminar
+          </button>
+        </td>
+      </tr>
 
-    <tr *ngFor="let estudiante of estudiantes; let i = index">
+      </tbody>
 
-      <td>{{ i + 1 }}</td>
+    </table>
 
-      <td>{{ estudiante.nombre }}</td>
-
-      <td>{{ estudiante.carrera }}</td>
-
-      <td>{{ estudiante.edad }}</td>
-
-      <td>
-
-        <button
-          class="btn-eliminar"
-          (click)="eliminar(estudiante.id)"
-        >
-          Eliminar
-        </button>
-
-      </td>
-
-    </tr>
-
-    </tbody>
-
-  </table>
+  </div>
 
 </div>

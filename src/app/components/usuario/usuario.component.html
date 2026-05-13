@@ -1,8 +1,13 @@
 <div class="container">
 
-  <h2 class="titulo">Gestión de Usuarios</h2>
+  <h2>Gestión de Usuarios</h2>
+
+  <p class="subtitulo">
+    Administra usuarios de la plataforma 🚀
+  </p>
 
   <!-- FORMULARIO -->
+
   <div class="formulario">
 
     <input
@@ -24,10 +29,23 @@
     >
 
     <select [(ngModel)]="nuevoUsuario.rol">
-      <option value="">Seleccionar rol</option>
-      <option value="Administrador">Administrador</option>
-      <option value="Estudiante">Estudiante</option>
-      <option value="Mentor">Mentor</option>
+
+      <option value="">
+        Seleccionar rol
+      </option>
+
+      <option value="Administrador">
+        Administrador
+      </option>
+
+      <option value="Mentor">
+        Mentor
+      </option>
+
+      <option value="Estudiante">
+        Estudiante
+      </option>
+
     </select>
 
     <button (click)="agregarUsuario()">
@@ -37,9 +55,11 @@
   </div>
 
   <!-- TABLA -->
+
   <table>
 
     <thead>
+
     <tr>
       <th>ID</th>
       <th>Nombre</th>
@@ -47,6 +67,7 @@
       <th>Rol</th>
       <th>Acciones</th>
     </tr>
+
     </thead>
 
     <tbody>
@@ -62,9 +83,11 @@
       <td>{{ usuario.rol }}</td>
 
       <td>
+
         <button (click)="eliminarUsuario(i)">
           Eliminar
         </button>
+
       </td>
 
     </tr>

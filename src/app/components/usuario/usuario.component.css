@@ -1,34 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-/* ========================= */
-/* FONDO GENERAL */
-/* ========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 body{
   margin:0;
   padding:0;
   background:#050816;
-  font-family:'Poppins', sans-serif;
 }
-
-/* ========================= */
-/* CONTENEDOR */
-/* ========================= */
 
 .container{
 
-  max-width:1100px;
+  max-width:1200px;
 
   margin:40px auto;
 
   padding:30px;
 
+  font-family:'Poppins', sans-serif;
+
   color:white;
 }
 
-/* ========================= */
-/* TITULO */
-/* ========================= */
+/* TITULOS */
 
 .titulo{
 
@@ -36,10 +27,9 @@ body{
 
   font-weight:800;
 
-  margin-bottom:30px;
+  margin-bottom:10px;
 
-  background:
-  linear-gradient(
+  background:linear-gradient(
     135deg,
     #ffffff,
     #7c83ff
@@ -50,78 +40,58 @@ body{
   -webkit-text-fill-color:transparent;
 }
 
-/* ========================= */
-/* MENSAJE EXITO */
-/* ========================= */
+.subtitulo{
 
-.mensaje-exito{
+  color:#b8b8c5;
 
-  background:
-  linear-gradient(
-    135deg,
-    #22c55e,
-    #16a34a
-  );
+  margin-bottom:35px;
 
-  padding:14px 20px;
-
-  border-radius:14px;
-
-  margin-bottom:20px;
-
-  color:white;
-
-  font-weight:600;
-
-  box-shadow:
-  0 10px 25px rgba(34,197,94,0.25);
+  font-size:16px;
 }
 
-/* ========================= */
 /* FORMULARIO */
-/* ========================= */
 
 .formulario{
 
-  background:
-  rgba(255,255,255,0.05);
+  background:rgba(255,255,255,0.04);
 
-  border:
-  1px solid rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.08);
 
-  backdrop-filter:
-  blur(14px);
+  backdrop-filter:blur(14px);
 
-  border-radius:28px;
+  border-radius:30px;
 
   padding:35px;
 
   margin-bottom:40px;
 
   box-shadow:
-  0 20px 45px rgba(0,0,0,0.35);
+  0 15px 40px rgba(0,0,0,0.35);
 }
 
-/* ========================= */
 /* INPUTS */
-/* ========================= */
 
 .formulario input,
 .formulario select{
 
   width:100%;
 
-  padding:18px;
+  padding:16px;
 
-  margin-bottom:20px;
+  margin-bottom:18px;
 
-  border:none;
+  border:1px solid rgba(255,255,255,0.10);
 
-  border-radius:16px;
+  border-radius:18px;
 
-  background:white;
+  background:
+  rgba(255,255,255,0.08);
 
-  color:#111827;
+  backdrop-filter:blur(10px);
+
+  color:#111827 !important;
+
+  -webkit-text-fill-color:#111827 !important;
 
   font-size:15px;
 
@@ -129,42 +99,40 @@ body{
 
   outline:none;
 
-  transition:0.3s ease;
+  transition:0.35s ease;
 
   box-sizing:border-box;
 }
 
-/* PLACEHOLDER */
-
 .formulario input::placeholder{
 
   color:#6b7280;
+
+  opacity:1;
 }
 
-/* FOCUS */
+.formulario select{
+
+  color:#111827 !important;
+}
 
 .formulario input:focus,
 .formulario select:focus{
 
-  box-shadow:
-  0 0 0 4px rgba(124,131,255,0.25);
+  background:
+  rgba(255,255,255,0.12);
 
-  transform:translateY(-2px);
+  border:1px solid #7c83ff;
+
+  box-shadow:
+  0 0 20px rgba(124,131,255,0.35);
 }
 
-/* ========================= */
 /* BOTON */
-/* ========================= */
 
 .formulario button{
 
   width:100%;
-
-  padding:18px;
-
-  border:none;
-
-  border-radius:18px;
 
   background:
   linear-gradient(
@@ -175,7 +143,11 @@ body{
 
   color:white;
 
-  font-size:16px;
+  border:none;
+
+  padding:16px 30px;
+
+  border-radius:18px;
 
   font-weight:700;
 
@@ -184,43 +156,41 @@ body{
   transition:0.35s ease;
 
   box-shadow:
-  0 15px 30px rgba(91,110,255,0.35);
+  0 10px 30px rgba(91,110,255,0.35);
 }
 
 .formulario button:hover{
 
-  transform:
-  translateY(-4px);
+  transform:translateY(-4px);
 
   box-shadow:
-  0 22px 40px rgba(91,110,255,0.45);
+  0 18px 35px rgba(91,110,255,0.50);
 }
 
-/* ========================= */
 /* TABLA */
-/* ========================= */
+
+.tabla-container{
+
+  overflow-x:auto;
+
+  border-radius:28px;
+
+  background:rgba(255,255,255,0.04);
+
+  backdrop-filter:blur(14px);
+
+  box-shadow:
+  0 15px 40px rgba(0,0,0,0.35);
+}
 
 table{
 
   width:100%;
 
   border-collapse:collapse;
-
-  overflow:hidden;
-
-  border-radius:24px;
-
-  background:
-  rgba(255,255,255,0.05);
-
-  backdrop-filter:
-  blur(14px);
-
-  box-shadow:
-  0 20px 45px rgba(0,0,0,0.35);
 }
 
-/* HEADER */
+/* HEADER TABLA */
 
 th{
 
@@ -249,16 +219,14 @@ td{
   padding:18px;
 
   border-bottom:
-  1px solid rgba(255,255,255,0.08);
+  1px solid rgba(255,255,255,0.06);
 
-  color:#f3f4f6;
+  color:#f1f5ff;
 
-  font-size:15px;
+  font-size:14px;
 
-  font-weight:500;
+  font-weight:600;
 }
-
-/* HOVER */
 
 tr{
 
@@ -271,9 +239,7 @@ tr:hover{
   rgba(124,131,255,0.08);
 }
 
-/* ========================= */
 /* BOTON ELIMINAR */
-/* ========================= */
 
 .btn-eliminar{
 
@@ -288,7 +254,7 @@ tr:hover{
 
   border:none;
 
-  padding:10px 18px;
+  padding:10px 16px;
 
   border-radius:12px;
 
@@ -304,34 +270,5 @@ tr:hover{
   transform:scale(1.05);
 
   box-shadow:
-  0 12px 25px rgba(255,75,110,0.35);
-}
-
-/* ========================= */
-/* RESPONSIVE */
-/* ========================= */
-
-@media(max-width:900px){
-
-  .titulo{
-
-    font-size:2.2rem;
-  }
-
-  .container{
-
-    padding:15px;
-  }
-
-  table{
-
-    display:block;
-
-    overflow-x:auto;
-  }
-
-  .formulario{
-
-    padding:25px;
-  }
+  0 10px 25px rgba(255,75,110,0.35);
 }
