@@ -1,1 +1,107 @@
-<p>evento works perras!</p>
+<div class="container">
+
+  <h1 class="titulo">
+    Eventos y Conferencias
+  </h1>
+
+  <p class="subtitulo">
+    Descubre y organiza eventos increíbles 🚀
+  </p>
+
+  <!-- MENSAJE -->
+
+  <div
+    class="mensaje"
+    *ngIf="mensajeExito"
+  >
+    {{ mensajeExito }}
+  </div>
+
+  <!-- FORMULARIO -->
+
+  <div class="formulario">
+
+    <input
+      type="text"
+      placeholder="Nombre del evento"
+      [(ngModel)]="nuevoEvento.nombre"
+    >
+
+    <input
+      type="date"
+      [(ngModel)]="nuevoEvento.fecha"
+    >
+
+    <input
+      type="text"
+      placeholder="Lugar"
+      [(ngModel)]="nuevoEvento.lugar"
+    >
+
+    <input
+      type="text"
+      placeholder="Descripción"
+      [(ngModel)]="nuevoEvento.descripcion"
+    >
+
+    <input
+      type="text"
+      placeholder="Organizador"
+      [(ngModel)]="nuevoEvento.organizador"
+    >
+
+    <button (click)="guardar()">
+      ✨ Registrar Evento
+    </button>
+
+  </div>
+
+  <!-- TABLA -->
+
+  <table>
+
+    <thead>
+
+    <tr>
+      <th>Evento</th>
+      <th>Fecha</th>
+      <th>Lugar</th>
+      <th>Descripción</th>
+      <th>Organizador</th>
+      <th>Acciones</th>
+    </tr>
+
+    </thead>
+
+    <tbody>
+
+    <tr *ngFor="let evento of eventos">
+
+      <td>{{ evento.nombre }}</td>
+
+      <td>{{ evento.fecha }}</td>
+
+      <td>{{ evento.lugar }}</td>
+
+      <td>{{ evento.descripcion }}</td>
+
+      <td>{{ evento.organizador }}</td>
+
+      <td>
+
+        <button
+          class="btn-eliminar"
+          (click)="eliminar(evento.id!)"
+        >
+          Eliminar
+        </button>
+
+      </td>
+
+    </tr>
+
+    </tbody>
+
+  </table>
+
+</div>
