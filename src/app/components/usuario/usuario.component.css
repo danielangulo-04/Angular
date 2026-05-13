@@ -42,7 +42,7 @@ body{
 
 .subtitulo{
 
-  color:#b8b8c5;
+  color:#2d2d2e;
 
   margin-bottom:35px;
 
@@ -183,6 +183,7 @@ body{
   0 15px 40px rgba(0,0,0,0.35);
 }
 
+
 table{
 
   width:100%;
@@ -221,14 +222,23 @@ td{
   border-bottom:
   1px solid rgba(255,255,255,0.06);
 
-  color:#f1f5ff;
+  color:#000000;
 
   font-size:14px;
 
   font-weight:600;
 }
+/* FILAS */
 
 tr{
+  background:#eef2ff;
+
+  transition:0.3s ease;
+}
+
+tr:hover td{
+
+  background:#eef2ff;
 
   transition:0.3s ease;
 }
