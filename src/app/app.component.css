@@ -47,7 +47,7 @@ header {
 .busqueda button {
   background-color: transparent;
   border: none;
-  color: #d4af37;
+  color: #818cf8;
   font-size: 0.9rem;
   width: 32px;
   height: 32px;
@@ -60,7 +60,7 @@ header {
 }
 
 .busqueda button:hover {
-  background-color: #d4af37;
+  background-color: #818cf8;
   color: white;
   transform: scale(1.05);
 }
@@ -86,7 +86,11 @@ nav {
 }
 
 .btn-fondo {
-  background: none;
+      background:
+    linear-gradient(
+        135deg,
+        #6366f1,
+        #818cf8,);
  border: none;
   border-radius: 50px;
   padding: 8px 20px;
@@ -97,15 +101,15 @@ nav {
 
 .btn-fondo:hover {
   text-decoration: underline;
-  text-decoration-color: #d4af37;
+  text-decoration-color: #818cf8;
   color: #ffffff;
-  background-color: #d4af37;
+  background-color: #818cf8;
   border-radius: 50px;
 
 }
 
 .btn-fondo.activo {
-  background-color: #d4af37;
+  background-color: #818cf8;
   color: #ffffff;
   border-radius: 50px;
   text-decoration: underline;

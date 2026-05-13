@@ -46,11 +46,11 @@ main,
 
 .container{
     width:100%;
-    max-width:1300px;
+    max-width:1400px;
 
     margin:auto;
 
-    padding:40px 6%;
+    padding:40px 2%;
 }
 
 /* ========================= */
@@ -75,6 +75,7 @@ main,
 .Inicio-text{
     flex:1;
     min-width:320px;
+
 }
 
 .Inicio-text h1{
@@ -102,7 +103,7 @@ main,
 }
 
 .msg{
-    color:var(--muted);
+    color: #ffffff;
 
     font-size:17px;
 
@@ -233,7 +234,7 @@ main,
 /* ========================= */
 
 .slogan{
-    color:var(--muted);
+    color:#f3f4f6;
 
     margin-bottom:20px;
 

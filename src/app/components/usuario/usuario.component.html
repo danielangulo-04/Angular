@@ -10,23 +10,11 @@
 
   <div class="formulario">
 
-    <input
-      type="text"
-      placeholder="Nombre completo"
-      [(ngModel)]="nuevoUsuario.nombre"
-    >
+    <input type="text" placeholder="Nombre completo" [(ngModel)]="nuevoUsuario.nombre">
 
-    <input
-      type="email"
-      placeholder="Correo electrónico"
-      [(ngModel)]="nuevoUsuario.correo"
-    >
+    <input type="email" placeholder="Correo electrónico" [(ngModel)]="nuevoUsuario.correo">
 
-    <input
-      type="password"
-      placeholder="Contraseña"
-      [(ngModel)]="nuevoUsuario.password"
-    >
+    <input type="password" placeholder="Contraseña" [(ngModel)]="nuevoUsuario.password">
 
     <select [(ngModel)]="nuevoUsuario.rol">
 
@@ -56,44 +44,46 @@
 
   <!-- TABLA -->
 
-  <table>
+  <div class="tabla-container">
 
-    <thead>
+    <table>
 
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Correo</th>
-      <th>Rol</th>
-      <th>Acciones</th>
-    </tr>
+      <thead>
 
-    </thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Correo</th>
+          <th>Rol</th>
+          <th>Acciones</th>
+        </tr>
 
-    <tbody>
+      </thead>
 
-    <tr *ngFor="let usuario of usuarios; let i = index">
+      <tbody>
 
-      <td>{{ i + 1 }}</td>
+        <tr *ngFor="let usuario of usuarios; let i = index">
 
-      <td>{{ usuario.nombre }}</td>
+          <td>{{ i + 1 }}</td>
 
-      <td>{{ usuario.correo }}</td>
+          <td>{{ usuario.nombre }}</td>
 
-      <td>{{ usuario.rol }}</td>
+          <td>{{ usuario.correo }}</td>
 
-      <td>
+          <td>{{ usuario.rol }}</td>
 
-        <button (click)="eliminarUsuario(i)">
-          Eliminar
-        </button>
+          <td>
 
-      </td>
+            <button class="btn-eliminar" (click)="eliminarUsuario(i)">Eliminar
+            </button>
 
-    </tr>
+          </td>
 
-    </tbody>
+        </tr>
 
-  </table>
+      </tbody>
+
+    </table>
+  </div>
 
 </div>
