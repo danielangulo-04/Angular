@@ -1,5 +1,6 @@
-```css
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
 
 *{
     margin:0;
@@ -22,6 +23,18 @@
     radial-gradient(circle at top left,#f7dfff 0%,transparent 25%),
     radial-gradient(circle at bottom right,#dfe9ff 0%,transparent 25%),
     linear-gradient(135deg,#f8f9ff,#eef2ff,#fdfcff);
+}
+
+.error {
+  color: #e53935;
+  font-size: 13px;
+  margin: 5px 0;
+}
+
+.exito {
+  color: #43a047;
+  font-size: 13px;
+  margin: 5px 0;
 }
 
 /* EFECTOS DE FONDO */
@@ -430,7 +443,7 @@
         z-index:5;
     }
 }
-```
+
 
 
 

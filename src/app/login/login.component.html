@@ -1,19 +1,23 @@
 <div class="login-wrapper">
   <div class="container" id="container">
+
     <!-- Crear cuenta -->
     <div class="form-container Crear-cuenta">
       <form (submit)="onRegister($event)">
         <h1>Crear Cuenta</h1>
-
-
         <span>O usa tu correo para registrarte</span>
-        <input type="text" placeholder="Nombre" required />
-        <input type="email" placeholder="Correo electrónico" required />
-        <input type="password" placeholder="Contraseña" required />
-        <input type="password" placeholder="Confirmar contraseña" required />
+
+        <input type="text" [(ngModel)]="registerNombre" name="registerNombre" placeholder="Nombre" required />
+        <input type="email" [(ngModel)]="registerEmail" name="registerEmail" placeholder="Correo electrónico" required />
+        <input type="password" [(ngModel)]="registerPassword" name="registerPassword" placeholder="Contraseña" required />
+        <input type="password" [(ngModel)]="registerConfirm" name="registerConfirm" placeholder="Confirmar contraseña" required />
+
+        <p *ngIf="errorRegister" class="error">{{ errorRegister }}</p>
+        <p *ngIf="exitoRegister" class="exito">{{ exitoRegister }}</p>
+
         <button type="submit">Crear</button>
 
-                <div class="Iconos-Social">
+        <div class="Iconos-Social">
           <a href="#" class="icon"><img src="assets/icons8-logo-de-google.svg" alt="Google" /></a>
           <a href="#" class="icon"><img src="assets/icons8-facebook-nuevo.svg" alt="Facebook" /></a>
           <a href="#" class="icon"><img src="assets/icons8-github.svg" alt="GitHub" /></a>
@@ -22,7 +26,7 @@
       </form>
     </div>
 
-    <!-- Iniciar sesion -->
+    <!-- Iniciar sesión -->
     <div class="form-container Iniciar-Sesion">
       <form (submit)="onLogin($event)">
 
@@ -34,8 +38,12 @@
         </div>
 
         <span>O usa tu correo y contraseña</span>
-        <input type="email" placeholder="Correo electrónico" required />
-        <input type="password" placeholder="Contraseña" required />
+
+        <input type="email" [(ngModel)]="loginEmail" name="loginEmail" placeholder="Correo electrónico" required />
+        <input type="password" [(ngModel)]="loginPassword" name="loginPassword" placeholder="Contraseña" required />
+
+        <p *ngIf="errorLogin" class="error">{{ errorLogin }}</p>
+
         <a href="#">¿Olvidaste tu contraseña?</a>
         <button type="submit">Iniciar Sesión</button>
       </form>
@@ -45,19 +53,17 @@
     <div class="toggle-container">
       <div class="toggle">
         <div class="toggle-panel toggle-left">
-
           <h1>UNDERTAKE</h1>
-          <p>“Educamos para crear, inspiramos para emprender.”</p>
+          <p>"Educamos para crear, inspiramos para emprender."</p>
           <button class="hidden" (click)="toggleForm('login')">Iniciar Sesión</button>
         </div>
         <div class="toggle-panel toggle-right">
-
           <h1>UNDERTAKE</h1>
-          <p>“Educamos para crear, inspiramos para emprender.”</p>
+          <p>"Educamos para crear, inspiramos para emprender."</p>
           <button class="hidden" (click)="toggleForm('register')">Crear Cuenta</button>
         </div>
       </div>
     </div>
+
   </div>
 </div>
-
