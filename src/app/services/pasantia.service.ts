@@ -13,7 +13,7 @@ export interface Pasantia {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PasantiaService {
   private url = `${environment.apiUrl}/pasantias`;
