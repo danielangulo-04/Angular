@@ -2,12 +2,6 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink} from '@angular/router';
 
-/**
- * Descripción: Componente que muestra las categorias de los productos
- * Autor: Kevin Acosta.
- * Fecha de creación: 02/10/2025
- */
-
 @Component({
   selector: 'app-categorias',
   imports: [CommonModule, RouterLink],
