@@ -52,12 +52,6 @@ body{
 
   box-shadow:
   0 15px 40px rgba(0,0,0,0.35);
-
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-
-
 }
 
 /* INPUTS */
@@ -114,7 +108,7 @@ body{
 
 .formulario button{
 
-  width:auto;
+  width:100%;
 
   background:
   linear-gradient(
