@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 export interface Mentor {
   id?: number;
@@ -12,11 +13,10 @@ export interface Mentor {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MentorService {
-
-  private apiUrl = 'http://localhost:8080/mentores';
+  private apiUrl = `${environment.apiUrl}/mentores`;
 
   constructor(private http: HttpClient) {}
 

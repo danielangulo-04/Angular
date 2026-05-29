@@ -19,6 +19,10 @@ export class UsuarioService {
 
   constructor(private http: HttpClient) {}
 
+    login(email: string, password: string): Observable<Usuario> {
+  return this.http.post<Usuario>(`${this.url}/login`, { email, password });
+}
+
   obtenerTodos(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.url);
   }
@@ -34,4 +38,7 @@ export class UsuarioService {
   eliminar(id: string): Observable<void> {
     return this.http.delete<void>(`${this.url}/${id}`);
   }
+
+
+
 }
