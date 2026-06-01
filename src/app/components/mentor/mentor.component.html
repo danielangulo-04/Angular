@@ -16,51 +16,24 @@
   <!-- FORMULARIO -->
 
 
-    <div class="formulario">
+  <div class="formulario">
 
-      <input
-        type="text"
-        placeholder="Nombre del mentor"
-        [(ngModel)]="nuevoMentor.nombre"
-      />
+    <input type="text" placeholder="Nombre del mentor" [(ngModel)]="nuevoMentor.nombre" />
 
-      <input
-        type="text"
-        placeholder="Especialidad"
-        [(ngModel)]="nuevoMentor.especialidad"
-      />
+    <input type="text" placeholder="Especialidad" [(ngModel)]="nuevoMentor.especialidad" />
 
-      <input
-        type="text"
-        placeholder="Experiencia"
-        [(ngModel)]="nuevoMentor.experiencia"
-      />
+    <input type="text" placeholder="Experiencia" [(ngModel)]="nuevoMentor.experiencia" />
 
-      <input
-        type="email"
-        placeholder="Correo electrónico"
-        [(ngModel)]="nuevoMentor.email"
-      />
+    <input type="email" placeholder="Correo electrónico" [(ngModel)]="nuevoMentor.email" />
 
-      <input
-        type="text"
-        placeholder="Teléfono"
-        [(ngModel)]="nuevoMentor.telefono"
-      />
+    <input type="text" placeholder="Teléfono" [(ngModel)]="nuevoMentor.telefono" />
 
-          <button (click)="guardar()">
-<<<<<<< HEAD
+    <button (click)="guardar()">
       Registrar Mentor
     </button>
-=======
-            Registrar Mentor
-          </button>
->>>>>>> c11c9e74f26e83b00ddadb1f71d4144cbabd7439
 
 
-    </div>
-
-
+  </div>
 
 
   <!-- TABLA -->
@@ -69,39 +42,36 @@
     <table>
 
       <thead>
-      <tr>
-        <th>Mentor</th>
-        <th>Especialidad</th>
-        <th>Experiencia</th>
-        <th>Email</th>
-        <th>Teléfono</th>
-      </tr>
+        <tr>
+          <th>Mentor</th>
+          <th>Especialidad</th>
+          <th>Experiencia</th>
+          <th>Email</th>
+          <th>Teléfono</th>
+        </tr>
       </thead>
 
       <tbody>
 
-      <tr *ngFor="let mentor of mentores">
+        <tr *ngFor="let mentor of mentores">
 
-        <td>{{ mentor.nombre }}</td>
+          <td>{{ mentor.nombre }}</td>
 
-        <td>{{ mentor.especialidad }}</td>
+          <td>{{ mentor.especialidad }}</td>
 
-        <td>{{ mentor.experiencia }}</td>
+          <td>{{ mentor.experiencia }}</td>
 
-        <td>{{ mentor.email }}</td>
+          <td>{{ mentor.email }}</td>
 
-        <td>{{ mentor.telefono }}</td>
+          <td>{{ mentor.telefono }}</td>
 
-        <td>
-          <button
-            class="btn-eliminar"
-            (click)="eliminar(mentor.id!)"
-          >
-            Eliminar
-          </button>
-        </td>
+          <td>
+            <button class="btn-eliminar" (click)="eliminar(mentor.id!)">
+              Eliminar
+            </button>
+          </td>
 
-      </tr>
+        </tr>
 
       </tbody>
 
