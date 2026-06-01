@@ -54,6 +54,11 @@ body{
   backdrop-filter:blur(15px);
 
   box-shadow:0 15px 40px rgba(0,0,0,0.35);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
 }
 
 /* INPUTS */
@@ -103,7 +108,7 @@ body{
 
 .formulario button{
 
-  width:100%;
+  width:auto;
 
   padding:16px;
 
