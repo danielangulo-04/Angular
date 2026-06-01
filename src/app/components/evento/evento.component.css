@@ -139,6 +139,11 @@ body{
 
   box-shadow:
   0 10px 30px rgba(91,110,255,0.35);
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+
 }
 
 .formulario button:hover{

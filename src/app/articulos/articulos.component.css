@@ -143,16 +143,8 @@
   line-height:1.1;
 
   margin-bottom:10px;
+    color:#ffffff;
 
-  background:
-  linear-gradient(
-      135deg,
-      #ffffff,
-      #c7d2fe
-  );
-
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
 }
 
 .header-subtitle{
@@ -180,7 +172,7 @@
       #8b5cf6
   );
 
-  color:white;
+  color: #ffffff;
 
   padding:14px 24px;
 
@@ -240,8 +232,7 @@
   width:100%;
   max-width:950px;
 
-  margin:auto;
-  margin-bottom:50px;
+  margin: 0 auto 50px auto;
 
   background:
   rgba(255,255,255,0.05);
@@ -304,9 +295,15 @@
   border:
   1px solid rgba(255,255,255,0.08);
 
+<<<<<<< HEAD
   background: rgba(255,255,255);
 
   color:#000000;
+=======
+  background: rgb(255, 255, 255);
+
+  color: #000000;
+>>>>>>> c11c9e74f26e83b00ddadb1f71d4144cbabd7439
 
   outline:none;
 

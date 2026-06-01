@@ -45,6 +45,7 @@
       [(ngModel)]="nuevaPasantia.modalidad"
     >
 
+<<<<<<< HEAD
     <select [(ngModel)]="nuevaPasantia.ciudad" name="ciudad">
       <option value="">Seleccione una ciudad</option>
       <option value="Popayan">Popayán</option>
@@ -56,6 +57,24 @@
 
     <button (click)="guardar()">
       Registrar Pasantía
+=======
+    <select
+      [(ngModel)]="nuevaPasantia.ciudad"
+      name="ciudad"
+    >
+      <option value="">Seleccione una ciudad</option>
+      <option value="Popayán">Popayán</option>
+      <option value="Cali">Cali</option>
+      <option value="Bogotá">Bogotá</option>
+      <option value="Medellín">Medellín</option>
+      <option value="Pasto">Pasto</option>
+    </select>
+
+
+
+    <button (click)="guardar()">
+        Registrar Pasantía
+>>>>>>> c11c9e74f26e83b00ddadb1f71d4144cbabd7439
     </button>
 
   </div>
