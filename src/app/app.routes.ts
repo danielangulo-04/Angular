@@ -29,7 +29,7 @@ const estaLogueado = () => {
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [estaLogueado] },
-  { path: 'usuarios', component: UsuarioComponent, canActivate: [estaLogueado] },
+ // { path: 'usuarios', component: UsuarioComponent, canActivate: [estaLogueado] },
   { path: 'estudiantes', component: EstudianteComponent, canActivate: [estaLogueado] },
   { path: 'mentores', component: MentorComponent, canActivate: [estaLogueado] },
   { path: 'eventos', component: EventoComponent, canActivate: [estaLogueado] },
