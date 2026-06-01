@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 body{
@@ -60,7 +59,6 @@ body{
   flex-direction:column;
   align-items:center;
 
-
 }
 
 /* INPUTS */
@@ -110,7 +108,7 @@ body{
 
 .formulario button{
 
-  width:100%;
+  width:auto;
 
   padding:16px;
 

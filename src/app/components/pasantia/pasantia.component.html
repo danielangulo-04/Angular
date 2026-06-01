@@ -5,7 +5,7 @@
   </h1>
 
   <p class="subtitulo">
-    Encuentra oportunidades increíbles para tu futuro 💼
+    Encuentra oportunidades increíbles para tu futuro
   </p>
 
   <!-- MENSAJE -->
@@ -45,14 +45,22 @@
       [(ngModel)]="nuevaPasantia.modalidad"
     >
 
-    <input
-      type="text"
-      placeholder="Ciudad"
+    <select
       [(ngModel)]="nuevaPasantia.ciudad"
+      name="ciudad"
     >
+      <option value="">Seleccione una ciudad</option>
+      <option value="Popayán">Popayán</option>
+      <option value="Cali">Cali</option>
+      <option value="Bogotá">Bogotá</option>
+      <option value="Medellín">Medellín</option>
+      <option value="Pasto">Pasto</option>
+    </select>
+
+
 
     <button (click)="guardar()">
-      ✅ Registrar Pasantía
+        Registrar Pasantía
     </button>
 
   </div>
