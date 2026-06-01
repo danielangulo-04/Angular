@@ -3,7 +3,7 @@
   <!-- Header -->
   <div class="header-cursos">
     <div class="header-left">
-      <span class="header-badge">📚 Catálogo</span>
+      <span class="header-badge"> Catálogo</span>
       <h2 *ngIf="categoria">Cursos de {{ categoria }}</h2>
       <h2 *ngIf="!categoria">Explora nuestros cursos</h2>
       <p class="header-subtitle">Aprende a tu ritmo con contenido de calidad </p>
@@ -16,7 +16,7 @@
   <!-- Formulario para publicar curso -->
   <div class="formulario-container" *ngIf="mostrarFormulario">
     <div class="form-header">
-      <h3>🎓 Nuevo Curso</h3>
+      <h3> Nuevo Curso</h3>
       <p>Comparte tu conocimiento con la comunidad</p>
     </div>
 
@@ -25,7 +25,7 @@
       <img [src]="imagenPreview">
     </div>
     <div class="file-upload">
-      <label for="fileInput" class="custom-file-upload">📎 Subir imagen</label>
+      <label for="fileInput" class="custom-file-upload"> Subir imagen</label>
       <input type="file" id="fileInput" accept="image/*" (change)="onImageSelected($event)">
     </div>
 
@@ -50,14 +50,14 @@
     <textarea class="textarea" [(ngModel)]="nuevoArticulo.motivo"></textarea>
 
     <button class="btn-publicar2" (click)="publicarArticulo()">
-      🚀 Publicar Curso
+       Publicar Curso
     </button>
   </div>
 
   <!-- Formulario para editar curso -->
   <div class="formulario-container" *ngIf="editando">
     <div class="form-header">
-      <h3>✏️ Editar Curso</h3>
+      <h3> Editar Curso</h3>
     </div>
 
     <label class="label">Cambiar imagen</label>
@@ -65,7 +65,7 @@
       <img [src]="imagenEditPreview">
     </div>
     <div class="file-upload">
-      <label for="fileInputEdit" class="custom-file-upload">📎 Cambiar imagen</label>
+      <label for="fileInputEdit" class="custom-file-upload"> Cambiar imagen</label>
       <input type="file" id="fileInputEdit" accept="image/*"
              (change)="onEditImageSelected($event); onEditImageSelected($event)">
     </div>
@@ -89,7 +89,7 @@
     <label class="label">¿Por qué deberían tomarlo?</label>
     <textarea class="textarea" [(ngModel)]="articuloEditado.motivo"></textarea>
 
-    <button class="btn-publicar2" (click)="guardarCambios()">💾 Guardar cambios</button>
+    <button class="btn-publicar2" (click)="guardarCambios()"> Guardar cambios</button>
     <button class="btn-cancelar" (click)="cancelarEdicion()">Cancelar</button>
   </div>
 
@@ -104,7 +104,7 @@
         <h3>{{ articulo.nombre }}</h3>
         <p>{{ articulo.descripcion }}</p>
         <p class="motivo">
-          <span class="motivo-label">💡 Por qué tomarlo:</span> {{ articulo.motivo }}
+          <span class="motivo-label"> Por qué tomarlo:</span> {{ articulo.motivo }}
         </p>
       </div>
       <div class="acciones-articulo">
